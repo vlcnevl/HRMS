@@ -5,7 +5,7 @@
 <ul>
 <li>Spring Boot</li>
 <li>Hibernate</li>
-<li>Layered Architecture</li>
+<li>Layered Architecture Design Pattern</li>
 <li>PostgreSQL</li>
 <li>React for Frontend</li>
 </ul>
