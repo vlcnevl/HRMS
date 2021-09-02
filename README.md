@@ -8,7 +8,7 @@
 <li>Hibernate</li>
 <li>Layered Architecture</li>
 <li>PostgreSQL</li>
-<li>>React for Frontend</li>
+<li>React for Frontend</li>
 </ul>
 </div>
 
