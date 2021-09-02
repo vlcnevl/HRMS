@@ -8,7 +8,7 @@
 <li>Hibernate</li>
 <li>Layered Architecture</li>
 <li>PostgreSQL</li>
-<li><a href="https://github.com/vlcnevl/ReCapProjectFrontend">Angular for Frontend</a></li>
+<li>>React for Frontend</li>
 </ul>
 </div>
 
