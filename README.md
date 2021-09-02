@@ -1,2 +1,2 @@
 # HRMS
-Human Resources MAnagment System with Java
+Human Resources Managment System with Java
