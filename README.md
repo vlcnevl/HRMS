@@ -1,4 +1,3 @@
-# HRMS
 # Human Resources Managment System with Java
 
 <div id="user-content-technologies">
