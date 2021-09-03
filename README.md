@@ -7,6 +7,7 @@
 <li>Hibernate</li>
 <li>Layered Architecture Design Pattern</li>
 <li>PostgreSQL</li>
+<li>Cloudinary</li> 
 <li>React for Frontend</li>
 </ul>
 </div>
