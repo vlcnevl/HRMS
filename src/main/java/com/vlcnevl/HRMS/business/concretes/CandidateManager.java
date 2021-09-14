@@ -17,6 +17,7 @@ import com.vlcnevl.HRMS.business.abstracts.LinkService;
 import com.vlcnevl.HRMS.business.abstracts.PhotoService;
 import com.vlcnevl.HRMS.business.abstracts.SkillService;
 import com.vlcnevl.HRMS.core.utilities.results.DataResult;
+import com.vlcnevl.HRMS.core.utilities.results.ErrorResult;
 import com.vlcnevl.HRMS.core.utilities.results.Result;
 import com.vlcnevl.HRMS.core.utilities.results.SuccessDataResult;
 import com.vlcnevl.HRMS.core.utilities.results.SuccessResult;
@@ -86,5 +87,35 @@ public class CandidateManager implements CandidateService {
 		cv.setSkills(this.skillService.getByCandidateId(id).getData());
 		return new SuccessDataResult<>(cv,"your cv");
 	}
+
+
+	@Override
+	public DataResult<Candidate> getByEmailOrNationalityId(String email, String nationalityId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public DataResult<Candidate> getByNationalityId(String nationalityId) {
+		return new SuccessDataResult<Candidate>(this.candidateDao.getByNationalityId(nationalityId));
+	}
+
+
+
+	@Override
+	public Result login(String email, String password) {
+		var result = this.candidateDao.findCandidateByEmailAndPassword(email, password);
+		
+		if(result!=null)
+		{
+			return new SuccessResult("Login successfully");
+		}
+		return new ErrorResult("Login unsuccessfull");
+	}
+
+
+
+
+
 
 }

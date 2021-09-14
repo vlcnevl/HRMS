@@ -29,13 +29,16 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name="job_advertisement")
-@Inheritance(strategy = InheritanceType.JOINED )
 public class JobAdvertisement {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name="id")
 	private int id;
+	
+	@Column(name="tittle")
+	@NotNull
+	private String tittle;
 	
 	@Column(name="description")
 	@NotNull
@@ -54,6 +57,9 @@ public class JobAdvertisement {
 	@Column(name="open_position")
 	@Positive
 	private int openPosition;
+	
+	@Column(name="job_type")
+	private String jobType;
 	
 	@Column(name="created_date" , columnDefinition = "Date default CURRENT_DATE")
 	@JsonFormat(shape=JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")

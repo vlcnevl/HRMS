@@ -8,18 +8,22 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.vlcnevl.HRMS.core.entities.concretes.User;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 
 @Entity
 @Data
+@EqualsAndHashCode(callSuper=false)
 @AllArgsConstructor
 @NoArgsConstructor
 @PrimaryKeyJoinColumn(name="id",referencedColumnName = "id")
+@JsonIgnoreProperties({"hibernateLazyInitializer","handler","jobAnnouncements"})
 @Table(name="employers")
 public class Employer extends User{
 	

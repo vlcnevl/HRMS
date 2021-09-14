@@ -7,5 +7,4 @@ import com.vlcnevl.HRMS.entities.concretes.Employee;
 
 @Repository
 public interface EmployeeDao extends JpaRepository<Employee, Integer>{
-
 }

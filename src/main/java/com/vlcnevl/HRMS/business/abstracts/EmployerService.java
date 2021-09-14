@@ -9,4 +9,6 @@ import com.vlcnevl.HRMS.entities.concretes.Employer;
 public interface EmployerService {
 	DataResult<List<Employer>> getAll();
 	Result add(Employer employer);
+	Result login(String email,String password);
+
 }

@@ -7,4 +7,5 @@ import com.vlcnevl.HRMS.core.utilities.results.Result;
 public interface UserService {
 	DataResult<User> getByEmail(String email);
 	Result add(User user);
+	boolean existsByEmail(String email);
 }

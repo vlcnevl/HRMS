@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.vlcnevl.HRMS.business.abstracts.EmployerService;
 import com.vlcnevl.HRMS.core.utilities.results.DataResult;
+import com.vlcnevl.HRMS.core.utilities.results.ErrorResult;
 import com.vlcnevl.HRMS.core.utilities.results.Result;
 import com.vlcnevl.HRMS.core.utilities.results.SuccessDataResult;
 import com.vlcnevl.HRMS.core.utilities.results.SuccessResult;
@@ -33,6 +34,17 @@ public class EmployerManager implements EmployerService{
 	public Result add(Employer employer) {
 		this.employerDao.save(employer);
 		return new SuccessResult("Employer added");
+	}
+
+	@Override
+	public Result login(String email, String password) {
+		var result = this.employerDao.findEmployerByEmailAndPassword(email, password);
+		
+		if(result!=null)
+		{
+			return new SuccessResult("Login successfully");
+		}
+		return new ErrorResult("Login unsuccessfull");
 	}
 
 }

@@ -11,5 +11,8 @@ public interface CandidateService {
 	DataResult<List<Candidate>> getAll();
 	Result add(Candidate candidate);
 	DataResult<Candidate> getById(int candidateId);
+	DataResult<Candidate> getByNationalityId(String nationalityId);
 	DataResult<CvDto> getCvById(int id);
+	Result login(String email,String password);
+	DataResult<Candidate> getByEmailOrNationalityId(String email,String nationalityId);
 }
